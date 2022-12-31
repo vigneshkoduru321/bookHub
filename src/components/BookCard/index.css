@@ -1,0 +1,23 @@
+.book-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.cover-pic {
+  height: 100%;
+  margin-right: 15px;
+}
+.head {
+  color: #334155;
+  font-size: 20px;
+  font-family: 'Roboto';
+}
+.para {
+  color: #334155;
+  font-size: 15px;
+  font-family: 'Roboto';
+}

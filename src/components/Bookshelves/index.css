@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 90vh;
+  background-color: beige;
+}
+.side-bar {
+  height: 100%;
+  width: 20%;
+}
+.books-container {
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+}
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.btn-books {
+  width: 100%;
+  margin-top: 20px;
+  background-color: transparent;
+  border-width: 0px;
+  text-align: left;
+  padding-left: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.BooksShelves {
+  color: #334155;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  font-family: 'Roboto';
+  margin-left: 10px;
+}
+.search-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.search-btn {
+  height: 40px;
+}
+.search-input {
+  height: 40px;
+  width: 200px;
+  font-size: 15px;
+  padding-left: 10px;
+}

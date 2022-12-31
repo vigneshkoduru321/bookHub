@@ -1,0 +1,14 @@
+.logos {
+  height: 40px;
+}
+.logo-con {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.contact-us {
+  font-family: 'Roboto';
+  font-weight: 300;
+}

@@ -1,3 +1,45 @@
 .nav-logo {
   margin-left: 50px;
+  height: 40px;
+}
+.link-con {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.home-name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0284c7;
+}
+.bookshelves-name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0284c7;
+  margin: 20px;
+}
+.theme-button {
+  border-width: 0px;
+  background-color: transparent;
+}
+.moon {
+  font-size: 25px;
+  color: black;
+}
+.sun {
+  font-size: 25px;
+  color: white;
+}
+.log-out {
+  background-color: #0284c7;
+  font-family: 'Roboto';
+  height: 30px;
+  border-radius: 5px;
+  border-width: 0px;
+  width: 60px;
+  margin-right: 10px;
+  font-weight: 500;
+  color: white;
 }

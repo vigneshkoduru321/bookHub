@@ -4,3 +4,78 @@
   justify-content: flex-start;
   align-items: center;
 }
+.banner-con {
+  height: 170px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.top-head-button {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.find-books {
+  background-color: #0284c7;
+  width: 104px;
+  height: 36px;
+  border-width: 0px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: 'Roboto';
+  margin-right: 30px;
+}
+.went-wrong {
+  height: 100px;
+}
+.wrong-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.went-wrong-head {
+  font-size: 20px;
+  color: #475569;
+  font-weight: 500;
+}
+@media (max-width: 800px) {
+  .home-con {
+    display: none;
+  }
+}
+@media (min-width: 800px) {
+  .main-con-mb {
+    display: none;
+  }
+  .slider-container {
+    height: 200px;
+    width: 900px;
+  }
+  .book-con {
+    height: 200px;
+  }
+  .data-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+}
+.baner-con {
+  padding: 20px;
+}
+.paragraph {
+  font-family: 'Roboto';
+  font-weight: 400;
+  color: #475569;
+}
+.logo {
+  margin-left: 30px;
+}

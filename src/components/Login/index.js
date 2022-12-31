@@ -137,47 +137,49 @@ class Login extends Component {
                     alt=""
                     className="website-logo"
                   />
-                  <div className="label-div">
-                    <label className="label" htmlFor="username">
-                      USERNAME*
-                    </label>
-                    <input
-                      onChange={this.onChangeUsername}
-                      value={username}
-                      id="username"
-                      placeholder="USERNAME"
-                      className="input-username"
-                    />
-                  </div>
-                  <div className="label-div">
-                    <label className="label" htmlFor="password">
-                      PASSWORD*
-                    </label>
-                    <input
-                      onChange={this.onChangePassword}
-                      value={password}
-                      type={isShowPass ? 'text' : 'password'}
-                      id="password"
-                      placeholder="PASSWORD"
-                      className="input-username"
-                    />
-                  </div>
-                  <div className="check-box-con">
-                    <input
-                      onChange={this.onTogglePassword}
-                      id="checkbox"
-                      type="checkbox"
-                    />
-                    <label className="show-pass" htmlFor="checkbox">
-                      Show Password
-                    </label>
-                  </div>
-                  <button type="submit" className="submit-button">
-                    Login
-                  </button>
-                  <div className="toggle-con">
-                    {isError ? <p className="error-msg">{errorMsg}</p> : null}
-                  </div>
+                  <form onSubmit={this.onSubmit}>
+                    <div className="label-div">
+                      <label className="label" htmlFor="username">
+                        USERNAME*
+                      </label>
+                      <input
+                        onChange={this.onChangeUsername}
+                        value={username}
+                        id="username"
+                        placeholder="USERNAME"
+                        className="input-username"
+                      />
+                    </div>
+                    <div className="label-div">
+                      <label className="label" htmlFor="password">
+                        PASSWORD*
+                      </label>
+                      <input
+                        onChange={this.onChangePassword}
+                        value={password}
+                        type={isShowPass ? 'text' : 'password'}
+                        id="password"
+                        placeholder="PASSWORD"
+                        className="input-username"
+                      />
+                    </div>
+                    <div className="check-box-con">
+                      <input
+                        onChange={this.onTogglePassword}
+                        id="checkbox"
+                        type="checkbox"
+                      />
+                      <label className="show-pass" htmlFor="checkbox">
+                        Show Password
+                      </label>
+                    </div>
+                    <button type="submit" className="submit-button">
+                      Login
+                    </button>
+                    <div className="toggle-con">
+                      {isError ? <p className="error-msg">{errorMsg}</p> : null}
+                    </div>
+                  </form>
                 </DivCon>
               </div>
             </>

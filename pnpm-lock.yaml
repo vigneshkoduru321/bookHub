@@ -14,6 +14,7 @@ specifiers:
   eslint-config-prettier: 8.1.0
   eslint-plugin-import: 2.25.1
   eslint-plugin-prettier: 3.3.1
+  hamburger-react: 2.5.0
   history: 5.0.1
   husky: 4.3.8
   jest-styled-components: 7.0.5
@@ -42,6 +43,7 @@ dependencies:
   chalk: 4.1.0
   dom-helpers: 5.2.1
   enzyme: 3.11.0
+  hamburger-react: 2.5.0_react@17.0.1
   history: 5.0.1
   jest-styled-components: 7.0.5_styled-components@5.3.6
   js-cookie: 3.0.1
@@ -6397,6 +6399,14 @@ packages:
       duplexer: 0.1.2
       pify: 4.0.1
     dev: true
+
+  /hamburger-react/2.5.0_react@17.0.1:
+    resolution: {integrity: sha512-5GSXe+ucxTPJ0SkhIsPQ/PRDweZPIKya1lfahAuExx31SdheeUA4uOPfQIAirbKona8hvo79VDr5LJQzPXsdpw==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18
+    dependencies:
+      react: 17.0.1
+    dev: false
 
   /handle-thing/2.0.1:
     resolution: {integrity: sha512-9Qn4yBxelxoh2Ow62nP+Ka/kMnOXRi8BXnRaUwezLNhqelnN49xKz4F/dPP8OYLxLxq6JDtZb2i9XznUQbNPTg==}
