@@ -1,0 +1,35 @@
+.cover-pic-detail {
+  height: 200px;
+  width: 150px;
+  border-radius: 10px;
+}
+.img-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.content-detail-con {
+  margin-left: 30px;
+}
+.horizontal-line {
+  color: #94a3b8;
+  width: 90%;
+  border-style: solid;
+  margin-top: 15px;
+}
+.about-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.loading-con {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

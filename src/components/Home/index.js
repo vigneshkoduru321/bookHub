@@ -49,7 +49,7 @@ class Home extends Component {
   }
 
   renderLoading = () => (
-    <div className="data-con">
+    <div testid="loading" className="data-con">
       <div className="products-loader-container">
         <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
       </div>
@@ -131,7 +131,7 @@ class Home extends Component {
                 <DivTop isLight={isLight}>
                   <div className="top-head-button">
                     <Head isLight={isLight}>Top Rated Books</Head>
-                    <Link to="/bookshelves">
+                    <Link to="/shelf">
                       <button className="find-books">Find Books</button>
                     </Link>
                   </div>
@@ -148,7 +148,7 @@ class Home extends Component {
                     you have enjoyed in the past, and we will give you
                     surprisingly insightful recommendations.
                   </p>
-                  <Link style={{textDecoration: 'none'}} to="/bookshelves">
+                  <Link style={{textDecoration: 'none'}} to="/shelf">
                     <p className="find-books">Find Books</p>
                   </Link>
                 </div>

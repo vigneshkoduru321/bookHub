@@ -1,0 +1,15 @@
+.cover-bookCard {
+  height: 100%;
+}
+.content-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 25px;
+}
+.star {
+  color: gold;
+  margin: 3px;
+  margin-top: 5px;
+}

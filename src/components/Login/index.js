@@ -65,7 +65,7 @@ class Login extends Component {
               <div className="main-container">
                 <img
                   src="https://res.cloudinary.com/dzn2lfoqa/image/upload/v1672326518/Rectangle_1467_qqm7z8.png"
-                  alt=""
+                  alt="website login"
                   className="login-img"
                 />
                 <div className="form-con">
@@ -73,7 +73,7 @@ class Login extends Component {
                     <DivCon isLight={isLight}>
                       <img
                         src="https://res.cloudinary.com/dzn2lfoqa/image/upload/v1672330658/Group_7731_logo_krdzru.png"
-                        alt=""
+                        alt="login website logo"
                         className="website-logo"
                       />
                       <div className="label-div">

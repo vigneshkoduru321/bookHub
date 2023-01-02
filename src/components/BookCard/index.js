@@ -6,7 +6,7 @@ const BookCard = props => {
   const {details} = props
   const {authorName, coverPic, id, title} = details
   return (
-    <Link style={{textDecoration: 'none'}} to="/">
+    <Link style={{textDecoration: 'none'}} to={`/books/${id}`}>
       <div className="book-container">
         <img src={coverPic} alt="" className="cover-pic" />
         <div>

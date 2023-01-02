@@ -38,7 +38,7 @@ class Header extends Component {
                     <p className="home-name">Home</p>
                   </div>
                 </Link>
-                <Link style={{textDecoration: 'none'}} to="/bookshelves">
+                <Link style={{textDecoration: 'none'}} to="/shelf">
                   <div>
                     <p className="bookshelves-name">Bookshelves</p>
                   </div>

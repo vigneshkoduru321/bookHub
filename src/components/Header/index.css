@@ -23,6 +23,7 @@
 .theme-button {
   border-width: 0px;
   background-color: transparent;
+  cursor: pointer;
 }
 .moon {
   font-size: 25px;
@@ -42,4 +43,5 @@
   margin-right: 10px;
   font-weight: 500;
   color: white;
+  cursor: pointer;
 }

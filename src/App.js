@@ -11,6 +11,8 @@ import Login from './components/Login'
 import ProtectedRoute from './components/ProtectedRoute'
 import Home from './components/Home'
 import Bookshelves from './components/Bookshelves'
+import BookDetails from './components/BookDetails'
+import NotFound from './components/NotFound'
 
 const bookshelvesList = [
   {
@@ -49,7 +51,9 @@ class App extends Component {
         <Switch>
           <Route exact path="/login" component={Login} />
           <ProtectedRoute exact path="/" component={Home} />
-          <ProtectedRoute exact path="/bookshelves" component={Bookshelves} />
+          <ProtectedRoute exact path="/shelf" component={Bookshelves} />
+          <ProtectedRoute exact path="/books/:id" component={BookDetails} />
+          <Route component={NotFound} />
         </Switch>
       </ContextTheme.Provider>
     )

@@ -14,7 +14,8 @@ export const Nav = styled.nav`
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
+
   border-style: solid;
-  border-color: ${props => (props.isLight ? 'black' : 'white')};
+  border-color: ${props => (props.isLight ? '#94a3b8' : '#94a3b8')};
 `
 export default Nav

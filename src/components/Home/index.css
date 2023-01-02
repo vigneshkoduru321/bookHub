@@ -41,9 +41,10 @@
   align-items: center;
 }
 .went-wrong-head {
-  font-size: 20px;
+  font-size: 15px;
   color: #475569;
   font-weight: 500;
+  font-family: 'Roboto';
 }
 @media (max-width: 800px) {
   .home-con {
