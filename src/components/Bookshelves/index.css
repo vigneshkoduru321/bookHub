@@ -1,3 +1,13 @@
+.div-container-book {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+li {
+  list-style-type: none;
+}
 .container {
   display: flex;
   flex-direction: row;
@@ -103,4 +113,42 @@
 }
 .no-match-img {
   height: 300px;
+}
+
+.main-div {
+}
+
+.heading-shelves {
+  color: #0284c7;
+  font-weight: 500;
+  font-size: 25px;
+  font-family: 'Roboto';
+}
+.show-data {
+}
+.div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.button {
+  margin: 15px;
+  width: 200px;
+  height: 40px;
+  text-align: left;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Roboto';
+  border-width: 0px;
+  color: #0284c7;
+}
+
+.head-shelves {
+  color: #334155;
+  font-size: 15px;
+  font-weight: 500;
 }

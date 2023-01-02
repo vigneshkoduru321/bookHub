@@ -6,15 +6,17 @@ const BookCard = props => {
   const {details} = props
   const {authorName, coverPic, id, title} = details
   return (
-    <Link style={{textDecoration: 'none'}} to={`/books/${id}`}>
-      <div className="book-container">
-        <img src={coverPic} alt="" className="cover-pic" />
-        <div>
-          <h1 className="head">{title}</h1>
-          <p className="para">{authorName}</p>
+    <li>
+      <Link style={{textDecoration: 'none'}} to={`/books/${id}`}>
+        <div className="book-container">
+          <img src={coverPic} alt={title} className="cover-pic" />
+          <div>
+            <h1 className="head">{title}</h1>
+            <p className="para">{authorName}</p>
+          </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </li>
   )
 }
 

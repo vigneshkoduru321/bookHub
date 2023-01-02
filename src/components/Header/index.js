@@ -3,8 +3,6 @@ import {FiSun} from 'react-icons/fi'
 import {Component} from 'react'
 import {Link, withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
-import {Nav} from './styledComponent'
-import ContextTheme from '../../Context/ContextTheme'
 
 import './index.css'
 
@@ -17,47 +15,29 @@ class Header extends Component {
 
   render() {
     return (
-      <ContextTheme.Consumer>
-        {value => {
-          const {isLight, changeTheme} = value
-          const onClickChangeTheme = () => {
-            changeTheme()
-          }
-          return (
-            <Nav isLight={isLight}>
-              <Link style={{textDecoration: 'none'}} to="/">
-                <img
-                  className="nav-logo"
-                  src="https://res.cloudinary.com/dzn2lfoqa/image/upload/v1672330658/Group_7731_logo_krdzru.png"
-                  alt=""
-                />
-              </Link>
-              <div className="link-con">
-                <Link style={{textDecoration: 'none'}} to="/">
-                  <div>
-                    <p className="home-name">Home</p>
-                  </div>
-                </Link>
-                <Link style={{textDecoration: 'none'}} to="/shelf">
-                  <div>
-                    <p className="bookshelves-name">Bookshelves</p>
-                  </div>
-                </Link>
-                <button onClick={onClickChangeTheme} className="theme-button">
-                  {isLight ? (
-                    <FaMoon className="moon" />
-                  ) : (
-                    <FiSun className="sun" />
-                  )}
-                </button>
-                <button className="log-out" onClick={this.onClickLogout}>
-                  Logout
-                </button>
-              </div>
-            </Nav>
-          )
-        }}
-      </ContextTheme.Consumer>
+      <ul className="Nav">
+        <li>
+          <Link style={{textDecoration: 'none'}} to="/">
+            <img
+              className="nav-logo"
+              src="https://res.cloudinary.com/dzn2lfoqa/image/upload/v1672330658/Group_7731_logo_krdzru.png"
+              alt="website logo"
+            />
+          </Link>
+        </li>
+
+        <li className="link-con">
+          <Link style={{textDecoration: 'none'}} to="/">
+            <p className="home-name">Home</p>
+          </Link>
+          <Link style={{textDecoration: 'none'}} to="/shelf">
+            <p className="bookshelves-name">Bookshelves</p>
+          </Link>
+          <button className="log-out" onClick={this.onClickLogout}>
+            Logout
+          </button>
+        </li>
+      </ul>
     )
   }
 }

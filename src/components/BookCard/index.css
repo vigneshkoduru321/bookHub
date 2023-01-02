@@ -7,6 +7,9 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+li {
+  list-style-type: none;
+}
 .cover-pic {
   height: 100%;
   margin-right: 15px;
@@ -20,4 +23,7 @@
   color: #334155;
   font-size: 15px;
   font-family: 'Roboto';
+}
+li {
+  list-style-type: none;
 }

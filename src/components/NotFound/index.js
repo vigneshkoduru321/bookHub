@@ -1,26 +1,31 @@
-import ContextTheme from '../../Context/ContextTheme'
-
-import {DivNotFound, Heading, Para} from './styledComponent'
-
 import './index.css'
 
-const NotFound = () => (
-  <ContextTheme.Consumer>
-    {value => {
-      const {isLight} = value
-      return (
-        <DivNotFound isLight={isLight}>
-          <img
-            src="https://res.cloudinary.com/dzn2lfoqa/image/upload/v1672657884/Group_7484_jbbleh.png"
-            alt=""
-            className="not-found"
-          />
-          <Heading isLight={isLight}>Page Not Found</Heading>
-          <Para isLight={isLight}>Page Not Found</Para>
-        </DivNotFound>
-      )
-    }}
-  </ContextTheme.Consumer>
-)
+import {Redirect} from 'react-router-dom'
+
+import {Component} from 'react'
+
+class NotFound extends Component {
+  onClickHome = () => {
+    const {history} = this.props
+    history.replace('/')
+  }
+
+  render() {
+    return (
+      <div className="div-not-found">
+        <img
+          src="https://res.cloudinary.com/dzn2lfoqa/image/upload/v1672657884/Group_7484_jbbleh.png"
+          alt="not found"
+          className="not-found"
+        />
+        <h1 className="head-not-found">Page Not Found</h1>
+        <p className="para-not-found">
+          we are sorry, the page you requested could not be found
+        </p>
+        <button onClick={this.onClickHome}>Go Back to Home</button>
+      </div>
+    )
+  }
+}
 
 export default NotFound

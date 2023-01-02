@@ -12,3 +12,11 @@
   font-family: 'Roboto';
   font-weight: 300;
 }
+.logo-container {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}

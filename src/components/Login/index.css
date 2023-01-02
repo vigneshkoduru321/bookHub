@@ -1,3 +1,14 @@
+.div-con {
+  height: 400px;
+  width: 400px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+
 .main-container {
   height: 100vh;
   display: flex;

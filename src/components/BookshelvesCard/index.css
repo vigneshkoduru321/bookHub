@@ -13,3 +13,53 @@
   margin: 3px;
   margin-top: 5px;
 }
+
+.div-card {
+  height: 180px;
+  width: 400px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.head-card {
+  color: #1e293b;
+  text-align: left;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+.para-card {
+  color: #334155;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  font-family: 'Roboto';
+}
+.paraa-card {
+  color: #0284c7;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: 'Roboto';
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.p {
+  color: #334155;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: 'Roboto';
+}

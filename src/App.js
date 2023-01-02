@@ -1,8 +1,6 @@
 import {Component} from 'react'
 import {Switch, Route} from 'react-router-dom'
 
-import ContextTheme from './Context/ContextTheme'
-
 import './App.css'
 
 // use the below bookshelvesList for rendering read status of book items in Bookshelves Route
@@ -40,22 +38,15 @@ const bookshelvesList = [
 class App extends Component {
   state = {isLight: true}
 
-  changeTheme = () => {
-    this.setState(prevState => ({isLight: !prevState.isLight}))
-  }
-
   render() {
-    const {isLight} = this.state
     return (
-      <ContextTheme.Provider value={{isLight, changeTheme: this.changeTheme}}>
-        <Switch>
-          <Route exact path="/login" component={Login} />
-          <ProtectedRoute exact path="/" component={Home} />
-          <ProtectedRoute exact path="/shelf" component={Bookshelves} />
-          <ProtectedRoute exact path="/books/:id" component={BookDetails} />
-          <Route component={NotFound} />
-        </Switch>
-      </ContextTheme.Provider>
+      <Switch>
+        <Route exact path="/login" component={Login} />
+        <ProtectedRoute exact path="/" component={Home} />
+        <ProtectedRoute exact path="/shelf" component={Bookshelves} />
+        <ProtectedRoute exact path="/books/:id" component={BookDetails} />
+        <ProtectedRoute component={NotFound} />
+      </Switch>
     )
   }
 }

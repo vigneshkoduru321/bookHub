@@ -80,3 +80,44 @@
 .logo {
   margin-left: 30px;
 }
+
+.home-con {
+  background-color: white;
+  height: 100vh;
+}
+.heading {
+  color: #1e293b;
+  font-size: 30px;
+}
+
+.paragraoh {
+  color: #475569;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 32px;
+}
+
+.div-top {
+  border-style: solid;
+  height: 300px;
+  width: 80%;
+  border-color: #1e293b;
+  border-width: 1px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.head {
+  color: #1e293b;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  font-family: 'Roboto';
+  margin-left: 30px;
+}

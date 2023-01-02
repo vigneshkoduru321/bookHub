@@ -4,17 +4,6 @@ import {Component} from 'react'
 import {BsSearch} from 'react-icons/bs'
 import Loader from 'react-loader-spinner'
 
-import {
-  DivMain,
-  Div,
-  Heading,
-  ShowData,
-  Divv,
-  Button,
-  Headd,
-} from './styledComponent'
-
-import ContextTheme from '../../Context/ContextTheme'
 import BookshelvesCard from '../BookshelvesCard'
 import Footer from '../Footer'
 
@@ -143,21 +132,16 @@ class Bookshelves extends Component {
   renderSuccess = () => {
     const {Data} = this.state
     return (
-      <ContextTheme.Consumer>
-        {value => {
-          const {isLight} = value
-          return (
-            <>
-              <Divv isLight={isLight}>
-                {Data.map(each => (
-                  <BookshelvesCard details={each} key={each.id} />
-                ))}
-              </Divv>
-              <Footer />
-            </>
-          )
-        }}
-      </ContextTheme.Consumer>
+      <>
+        <div className="div">
+          {Data.map(each => (
+            <li>
+              <BookshelvesCard details={each} key={each.id} />
+            </li>
+          ))}
+        </div>
+        <Footer />
+      </>
     )
   }
 
@@ -170,11 +154,11 @@ class Bookshelves extends Component {
       <img
         className="went-wrong-bookshelves"
         src="https://res.cloudinary.com/dzn2lfoqa/image/upload/v1672392232/Group_7522_wentwrong_faawgk.png"
-        alt=""
+        alt="failure view"
       />
-      <h1 className="went-wrong-head-bookshelves">
+      <p className="went-wrong-head-bookshelves">
         Something went wrong, Please try again.
-      </h1>
+      </p>
       <button onClick={this.getBookShelvesDataAgain} className="find-books">
         Try Again
       </button>
@@ -198,88 +182,66 @@ class Bookshelves extends Component {
   render() {
     const {booksNotFound, searchText} = this.state
     return (
-      <ContextTheme.Consumer>
-        {value => {
-          const {selectedBook} = this.state
-          const {isLight} = value
-          return (
-            <DivMain isLight={isLight} className="">
-              <Header />
-              <Div isLight={isLight} className="container">
-                <div className="side-bar">
-                  <h1 className="BooksShelves">BooksShelves</h1>
-                  <Button
-                    stateValue={selectedBook}
-                    value="ALL"
-                    isLight={isLight}
-                    onClick={this.onSetAll}
-                  >
-                    ALL
-                  </Button>
-                  <Button
-                    stateValue={selectedBook}
-                    value="READ"
-                    isLight={isLight}
-                    onClick={this.onSetReading}
-                  >
-                    Read
-                  </Button>
-                  <Button
-                    stateValue={selectedBook}
-                    value="CURRENTLY_READING"
-                    isLight={isLight}
-                    onClick={this.onSetCurrent}
-                  >
-                    Currently Reading
-                  </Button>
-                  <Button
-                    stateValue={selectedBook}
-                    value="WANT_TO_READ"
-                    isLight={isLight}
-                    onClick={this.onSetWant}
-                  >
-                    Want to Read
-                  </Button>
+      <div className="main-div">
+        <Header />
+        <div className="div-container-book">
+          <div className="side-bar">
+            <h1 className="BooksShelves">Bookshelves</h1>
+            <button className="button" value="ALL" onClick={this.onSetAll}>
+              All
+            </button>
+            <button className="button" value="READ" onClick={this.onSetReading}>
+              Read
+            </button>
+            <button
+              className="button"
+              value="CURRENTLY_READING"
+              onClick={this.onSetCurrent}
+            >
+              Currently Reading
+            </button>
+            <button
+              className="button"
+              value="WANT_TO_READ"
+              onClick={this.onSetWant}
+            >
+              Want to Read
+            </button>
+          </div>
+          <div className="books-container">
+            <div className="search-head-con">
+              <h1 className="heading-shelves">{this.renderHeading()}</h1>
+              <div testid="searchButton" className="search-con">
+                <input
+                  onChange={this.onChangeSearch}
+                  placeholder="SEARCH"
+                  className="search-input"
+                  type="search"
+                />
+                <div testid="searchButton">
+                  <button onClick={this.onClickSearch} className="search-btn">
+                    <BsSearch />
+                  </button>
                 </div>
-                <div className="books-container">
-                  <div className="search-head-con">
-                    <Heading isLight={isLight}>{this.renderHeading()}</Heading>
-                    <div className="search-con">
-                      <input
-                        onChange={this.onChangeSearch}
-                        placeholder="SEARCH"
-                        className="search-input"
-                        type="search"
-                      />
-                      <button
-                        onClick={this.onClickSearch}
-                        className="search-btn"
-                        testid="searchButton"
-                      >
-                        <BsSearch />
-                      </button>
-                    </div>
-                  </div>
-                  {booksNotFound ? (
-                    <div className="no-match-con">
-                      <img
-                        src="https://res.cloudinary.com/dzn2lfoqa/image/upload/v1672656655/Asset_1_1_1_ounbbm.png"
-                        alt=""
-                        className="no-match-img"
-                      />
-                      <Headd isLight={isLight}>
-                        Your search for {searchText} did not find any matches.
-                      </Headd>
-                    </div>
-                  ) : (
-                    <ShowData isLight={isLight}>{this.renderItem()}</ShowData>
-                  )}
-                </div>
-              </Div>
-            </DivMain>
-          )
-        }}
-      </ContextTheme.Consumer>
+              </div>
+            </div>
+            {booksNotFound ? (
+              <div className="no-match-con">
+                <img
+                  src="https://res.cloudinary.com/dzn2lfoqa/image/upload/v1672656655/Asset_1_1_1_ounbbm.png"
+                  alt="no books"
+                  className="no-match-img"
+                />
+                <p className="head-shelves">
+                  Your search for {searchText} did not find any matches.
+                </p>
+              </div>
+            ) : (
+              <ul className="show-data">{this.renderItem()}</ul>
+            )}
+          </div>
+        </div>
+      </div>
     )
   }
 }

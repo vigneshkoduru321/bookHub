@@ -4,19 +4,8 @@ import Cookies from 'js-cookie'
 import {BsFillStarFill} from 'react-icons/bs'
 import './index.css'
 import Loader from 'react-loader-spinner'
-import {
-  Div,
-  Divv,
-  Head,
-  Para,
-  Paraa,
-  P,
-  Heading,
-  Paragraph,
-} from './styledComponent'
 
 import Header from '../Header'
-import ContextTheme from '../../Context/ContextTheme'
 import Footer from '../Footer'
 
 class BookDetails extends Component {
@@ -81,46 +70,47 @@ class BookDetails extends Component {
     } = Data
     return (
       <>
-        <ContextTheme.Consumer>
-          {value => {
-            const {isLight} = value
-            return (
-              <>
-                <Divv isLight={isLight}>
-                  <div className="img-con">
-                    <img src={coverPic} alt="" className="cover-pic-detail" />
-                    <div className="content-detail-con">
-                      <Head isLight={isLight}>{title}</Head>
-                      <Para isLight={isLight}>{authorName}</Para>
-                      <Para isLight={isLight}>
-                        Avg Rating <BsFillStarFill className="star" />
-                        {rating}
-                      </Para>
-                      <Paraa isLight={isLight}>
-                        <P isLight={isLight}>Status : </P> {readStatus}
-                      </Paraa>
-                    </div>
-                  </div>
-                  <hr className="horizontal-line" />
-                  <div className="about-con">
-                    <Heading isLight={isLight}>About Author</Heading>
-                    <Paragraph>{aboutAuthor}</Paragraph>
-                    <Heading isLight={isLight}>About Book</Heading>
-                    <Paragraph isLight={isLight}>{aboutBook}</Paragraph>
-                  </div>
-                </Divv>
-                <Footer />
-              </>
-            )
-          }}
-        </ContextTheme.Consumer>
+        <>
+          <div className="div-book-details">
+            <div className="img-con">
+              <img src={coverPic} alt={title} className="cover-pic-detail" />
+              <div className="content-detail-con">
+                <h1 className="head">{title}</h1>
+                <p className="para">{authorName}</p>
+                <p className="para">
+                  Avg Rating <BsFillStarFill className="star" />
+                  {rating}
+                </p>
+                <p className="paraa">Status:{readStatus}</p>
+              </div>
+            </div>
+            <hr className="horizontal-line" />
+            <div className="about-con">
+              <h1 className="heading-detail">About Author</h1>
+              <p className="para-detail">{aboutAuthor}</p>
+              <h1 className="heading-detail">About Book</h1>
+              <p className="para-detail">{aboutBook}</p>
+            </div>
+          </div>
+          <Footer />
+        </>
       </>
     )
   }
 
   renderFailure = () => (
-    <div>
-      <h1>failure</h1>
+    <div className="wrong-con-bookshelves">
+      <img
+        className="went-wrong-bookshelves"
+        src="https://res.cloudinary.com/dzn2lfoqa/image/upload/v1672392232/Group_7522_wentwrong_faawgk.png"
+        alt="failure view"
+      />
+      <p className="went-wrong-head-bookshelves">
+        Something went wrong, Please try again.
+      </p>
+      <button onClick={this.getBookDetails()} className="find-books">
+        Try Again
+      </button>
     </div>
   )
 
@@ -140,17 +130,10 @@ class BookDetails extends Component {
 
   render() {
     return (
-      <ContextTheme.Consumer>
-        {value => {
-          const {isLight} = value
-          return (
-            <Div isLight={isLight}>
-              <Header />
-              {this.renderItem()}
-            </Div>
-          )
-        }}
-      </ContextTheme.Consumer>
+      <div>
+        <Header />
+        {this.renderItem()}
+      </div>
     )
   }
 }
